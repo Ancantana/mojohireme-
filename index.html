@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mojo-Design-Intern-AnHuynh</title>
+    <style>
+        body {
+            background-color: #E8E8E8;
+            color: #6A6142;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            cursor: url('icon.png'), auto;
+        }
+        .header {
+            background-color: #F0FF00;
+            color: #6A6142;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .speed-option {
+            cursor: pointer;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            padding: 6px 12px;
+            border-radius: 18px;
+            transition: background-color 0.3s;
+        }
+        .speed-option:hover {
+            background-color: #E8E8E8;
+        }
+        .floating-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-auto-rows: minmax(100px, auto);
+            gap: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            pointer-events: none;
+        }
+        .floating-rectangle {
+            background-color: #fff;
+            border: 1px solid #6A6142;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            transition: transform 0.5s;
+            pointer-events: auto;
+        }
+        .website-link {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+        }
+        .popup {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #6A6142;
+            z-index: 999;
+            cursor: move;
+            width: 400px;
+            box-sizing: border-box;
+        }
+        .close-btn {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-container">
+        <!-- Added more floating rectangles -->
+        <div class="floating-rectangle">Hello Mojo Supermarket :P</div>
+        <div class="floating-rectangle">My name is An Huynh</div>
+        <div class="floating-rectangle">Click the icons for more</div>
+        <div class="floating-rectangle">I am a patternmaker</div>
+        <div class="floating-rectangle">I am a designer</div>
+        <div class="floating-rectangle">I have two cats</div>
+        <div class="floating-rectangle">I think things should be more fun</div>
+        <div class="floating-rectangle">I like mobile game lore</div>
+        <div class="floating-rectangle">I like Vietnamese Garments</div>
+        <div class="floating-rectangle">I like horror sci-fi</div>
+        <div class="floating-rectangle">I like playing bingo</div>
+        <div class="floating-rectangle">I like the song party 4 u</div>
+        <div class="floating-rectangle"><a href="https://an-huynh.com/" target="_blank" class="website-link">an-huynh.com</a></div>
+        <div class="floating-rectangle">I like heist movies</div>
+        <div class="floating-rectangle">I can change a tire</div>
+        <div class="floating-rectangle">I like going to estate sales</div>
+        <!-- Added more floating rectangles -->
+        <div class="floating-rectangle"><a href="https://an-huynh.com/" target="_blank" class="website-link">an-huynh.com</a></div>
+        <div class="floating-rectangle">I like early 2000s rnb</div>
+        <div class="floating-rectangle">I like QSL cards</div>
+        <div class="floating-rectangle">I can do a backflip</div>
+        <div class="floating-rectangle">I play mid in League</div>
+        <div class="floating-rectangle">I'm a fan of the Diddy Kong racing ost</div>
+        <div class="floating-rectangle"><a href="https://an-huynh.com/" target="_blank" class="website-link">an-huynh.com</a></div>
+        <div class="floating-rectangle">I can make a really good chicken pot pie</div>
+        <div class="floating-rectangle">I like bad sequels</div>
+        <div class="floating-rectangle">I wear Frederic Malle Portrait of a Lady</div>
+        <div class="floating-rectangle"><a href="https://an-huynh.com/" target="_blank" class="website-link">an-huynh.com</a></div>
+        <div class="floating-rectangle">I like Filipino Telenovelas</div>
+        <div class="floating-rectangle">I like Maison Martin Margiela A/W 2006</div>
+        <div class="floating-rectangle">I just ate some dragonfruit rn</div>
+        <div class="floating-rectangle"><a href="https://an-huynh.com/" target="_blank" class="website-link">an-huynh.com</a></div>
+        <div class="floating-rectangle">I'm looking for a sublet</div>
+        <div class="floating-rectangle">I used to be a competitive pokemon player</div>
+        <div class="floating-rectangle">I am not good at Yu-Gi-Oh</div>
+        <div class="floating-rectangle">I never meal prep</div>
+        <div class="floating-rectangle">I am kinda interested in everything that is unknown to me</div>
+        <div class="floating-rectangle"><a href="https://an-huynh.com/" target="_blank" class="website-link">an-huynh.com</a></div>
+        <div class="floating-rectangle">I make music (pls don't ask to hear it)</div>
+        <div class="floating-rectangle">I am pretty good at Just Dance</div>
+        <div class="floating-rectangle">I am also pretty good at DDR</div>
+        <div class="floating-rectangle">I like bad sequels</div>
+        <div class="floating-rectangle">I can knit a sweater</div>
+        <div class="floating-rectangle">I host pattern-making workshops</div>
+        <div class="floating-rectangle">I can hold my breath for 1 minute</div>
+        <div class="floating-rectangle">I like thai food</div>
+    </div>
+    <div class="content">
+        <header class="header">
+            <span class="speed-option" onclick="setSpeed('normal')">normal speed</span>
+            <div class="header-text">user/hire_me_please_MojoSupermarket_AnHuynh_DesignIntern</div>
+            <span class="speed-option" onclick="setSpeed('light')">mojo speed</span>
+        </header>
+        <div class="icon-container">
+            <img src="original_20eef208776a2bc402fc1ba65f666570.png" alt="Icon 1" class="icon" onclick="showPopup('popup1')">
+            <a href="https://an-huynh.com/" target="_blank">
+                <img src="original_4829ce3281b9c5fc08bf067c981f0b8d.png" alt="Icon 2" class="icon">
+            </a>
+            <img src="original_9b689f5b22b6c07d9139ba01a4a44ff8.png" alt="Icon 3" class="icon" onclick="showPopup('popup3')">
+        </div>
+        <div id="popup1" class="popup">
+            <span class="close-btn" onclick="hidePopup('popup1')">&times;</span>
+            <p>Helloo Mojo Supermarket! My name is An Huynh and I am a digital weaver and patternmaker. This is my rendition of your summer school website. You can see more of my work on my website (click on the dog).</p>
+        </div>
+        <div id="popup3" class="popup">
+            <span class="close-btn" onclick="hidePopup('popup3')">&times;</span>
+            <p>What can I bring to Mojo Supermarket? 1) I am a good designer 2) I can knit us all sweaters 3) I can code 4) I can move things with my mind</p>
+        </div>
+    </div>
+    <script>
+        const floatingRects = document.querySelectorAll('.floating-rectangle');
+        const body = document.body;
+        let isDragging = false;
+        let currentX;
+        let currentY;
+        let initialX;
+        let initialY;
+        let xOffset = 0;
+        let yOffset = 0;
+        let moveSpeed = 1;
+
+        function setSpeed(speed) {
+            switch (speed) {
+                case 'normal':
+                    moveSpeed = 1;
+                    break;
+                case 'light':
+                    moveSpeed = 4;
+                    break;
+            }
+        }
+
+        document.addEventListener('mousemove', (event) => {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+
+            floatingRects.forEach((rect) => {
+                const rectX = rect.getBoundingClientRect().left;
+                const rectY = rect.getBoundingClientRect().top;
+                const rectWidth = rect.offsetWidth;
+                const rectHeight = rect.offsetHeight;
+
+                const centerX = rectX + rectWidth / 2;
+                const centerY = rectY + rectHeight / 2;
+
+                const distanceX = mouseX - centerX;
+                const distanceY = mouseY - centerY;
+
+                const moveX = (distanceX > 0 ? Math.min(distanceX, 400) : Math.max(distanceX, -400)) * moveSpeed;
+                const moveY = (distanceY > 0 ? Math.min(distanceY, 400) : Math.max(distanceY, -400)) * moveSpeed;
+
+                const newX = Math.max(10, Math.min(rectX - moveX, window.innerWidth - rectWidth - 10));
+                const newY = Math.max(10, Math.min(rectY - moveY, window.innerHeight - rectHeight - 10));
+
+                rect.style.transform = `translate(${newX - rectX}px, ${newY - rectY}px)`;
+            });
+        });
+
+        function showPopup(id) {
+            const popup = document.getElementById(id);
+            popup.style.display = "block";
+
+            // Make the popup draggable
+            dragElement(popup);
+        }
+
+        function hidePopup(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        document.addEventListener("click", function(event) {
+            if (!event.target.matches(".icon") && !event.target.closest(".popup")) {
+                var popups = document.getElementsByClassName("popup");
+                for (var i = 0; i < popups.length; i++) {
+                    popups[i].style.display = "none";
+                }
+            }
+        });
+
+        function dragElement(elmnt) {
+            let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            const rect = elmnt.getBoundingClientRect();
+
+            elmnt.onmousedown = dragMouseDown;
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = Math.max(-rect.height / 2, Math.min(window.innerHeight - rect.height / 2, elmnt.offsetTop - pos2)) + "px";
+                elmnt.style.left = Math.max(-rect.width / 2, Math.min(window.innerWidth - rect.width / 2, elmnt.offsetLeft - pos1)) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+    </script>
+</body>
+</html>
